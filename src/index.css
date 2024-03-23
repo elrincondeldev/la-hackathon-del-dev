@@ -1,0 +1,91 @@
+body {
+  background-color: #161616;
+}
+
+li[data-sonner-toast][data-type='success'] svg {
+  color: #10b981;
+}
+
+li[data-sonner-toast][data-type='warning'] svg {
+  color: #f59e0b;
+}
+
+li[data-sonner-toast][data-type='error'] svg {
+  color: #ef4444;
+}
+
+.layout-responsive {
+  display: grid;
+  gap: 1rem;
+  grid-auto-rows: 22rem;
+  grid-template-columns: repeat(4, 1fr);
+
+  @media (max-width: 664.99px) {
+    grid-template-columns: 1fr;
+  }
+
+  @media (min-width: 665px) and (max-width: 1200px) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.hero-title {
+  font-size: clamp(2.8rem, 10vw, 6rem);
+}
+
+.hero-description {
+  font-size: clamp(1.4rem, 5vw, 2.25rem);
+}
+
+.hero-caption {
+  font-size: clamp(1rem, 5vw, 1.5rem);
+}
+
+.text-fluid-title {
+  font-size: clamp(2.2rem, 10vw, 5rem);
+  text-align: center;
+}
+
+/* Animations */
+.animate-fade-down {
+  animation: fadeDown ease-in-out both 200ms;
+}
+
+@keyframes fadeDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-2rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* delete after José fix Spline animation */
+canvas {
+  width: 300px !important;
+  margin-top: -5rem;
+  margin-right: -2rem;
+}
+
+.award-container {
+  min-height: 450px;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+
+  @media (width <= 1004px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.box:nth-child(2) {
+  align-self: start;
+
+  @media (width <= 1004px) {
+    order: -1;
+  }
+}
