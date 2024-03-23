@@ -24,8 +24,8 @@ const DEFAULT_REGISTER_FORM_VALUES: RegisterForm = {
 } as const
 
 export const Register = () => {
-  const supabaseUrl = import.meta.env.VITE_SUPABASE_URL
-  const supabaseKey = import.meta.env.VITE_SUPABASE_KEY
+  const supabaseUrl = process.env.VITE_SUPABASE_URL
+  const supabaseKey = process.env.VITE_SUPABASE_KEY
   const supabase = createClient(supabaseUrl, supabaseKey)
 
   const {
