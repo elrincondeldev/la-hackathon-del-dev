@@ -52,8 +52,8 @@ export const Regulation = () => {
             <p className="mt-2 text-lg text-[#BEBEBE]">
               a. La Hackathon Del Dev se llevará a cabo desde el 13/04/2024
               hasta el 27/04/2024. Cualquier modificación de fechas será
-              anunciado oficialmente por TodoCode y los organizadores de la
-              HackaCode.
+              anunciado oficialmente por El Rincon Del Dev y los organizadores
+              de la El Rincon Del Dev.
               <br />
               b. Solo durante este periodo se podrá trabajar en el proyecto.
               <br />
