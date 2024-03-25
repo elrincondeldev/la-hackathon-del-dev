@@ -29,7 +29,7 @@ export const ProjectForm: FC<Props> = ({ register, errors }) => {
 
       <Input
         id="project_url"
-        label="Repositorio de Github*"
+        label="Repositorio de Github. Debes crear un repositorio en Github y pegar la URL aquí, podrás empezar a trabajar en él el día 13 abril.*"
         error={errors['project_url']}
         placeholder="Introduce la URL de tu repositorio"
         {...register('project_url')}

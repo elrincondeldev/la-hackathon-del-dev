@@ -15,6 +15,11 @@ export const faqs: Array<FaqTypes> = [
       'En este hackathon, la elección del proyecto es completamente libre. Puedes desarrollar cualquier tipo de aplicación web que te apasione o que consideres interesante. ¡La creatividad es tu única limitación! Desde juegos interactivos hasta herramientas útiles para la comunidad, todo es válido. Así que, piensa en algo que te entusiasme y ¡adelante con tu idea!'
   },
   {
+    question: '¿Por qué tengo que introduir la URL del repositorio de GitHub?',
+    answer:
+      'La URL del repositorio de GitHub es necesaria para que podamos verificar que el proyecto ha sido creado durante la hackathon. De esta forma, garantizamos que todos los participantes comiencen el evento desde cero y tengan el mismo tiempo para desarrollar sus proyectos. Además, el uso de GitHub facilita la colaboración en equipo y el seguimiento del progreso del proyecto. Así que, asegúrate de crear tu repositorio en GitHub y pegar la URL en el formulario de registro.'
+  },
+  {
     question: '¿Puedo participar siendo principiante?',
     answer:
       '¡Absolutamente! Este hackathon está diseñado para dar la bienvenida a participantes de todos los niveles de experiencia. No importa si eres principiante, intermedio o avanzado en el desarrollo web, ¡todos son bienvenidos! Es una oportunidad perfecta para aprender, colaborar y sumergirte en el emocionante mundo de la creación de aplicaciones web. No dudes en unirte y ser parte de esta experiencia única.'

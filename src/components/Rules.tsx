@@ -13,7 +13,7 @@ export const Rules = () => {
         <Rule
           id={1}
           alt="person with computer logo"
-          description="Máximo de 4 miembros en el equipo"
+          description="Máximo de 4 miembros por equipo"
         />
         <Rule
           id={2}
@@ -28,7 +28,7 @@ export const Rules = () => {
         <Rule
           id={4}
           alt="sending message logo"
-          description="¡Participar el totalmente gratis!"
+          description="¡Participar es totalmente gratis!"
         />
       </section>
       <ButtonLink to="regulation">Ver reglamento</ButtonLink>
