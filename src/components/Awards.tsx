@@ -54,8 +54,8 @@ export const Awards = () => {
         />
         <Award
           img="mx_keys.webp"
-          alt="mx keys logo"
-          title="MX Keys"
+          alt="mx keys S logo"
+          title="MX Keys S"
           awardType={AWARD_TYPE.GIFT}
         />
         <Award
