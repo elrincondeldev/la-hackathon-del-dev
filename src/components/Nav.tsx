@@ -8,6 +8,7 @@ export const Nav = () => {
   const { pathname } = useLocation()
   const isHome = pathname === ROUTE.home
   const [isOpen, setIsOpen] = useState(false)
+  const [location, setLocation] = useState('')
 
   const classes = {
     container: cn(
@@ -41,9 +42,13 @@ export const Nav = () => {
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id)
     if (element) {
+      setLocation(element.id)
       element.scrollIntoView({ behavior: 'smooth' })
     }
   }
+
+  const linkClass = (active: boolean) =>
+    `hover:text-green cursor-pointer ${active ? 'text-green' : ''}`
 
   return isHome ? (
     <header className={classes.container}>
@@ -57,7 +62,17 @@ export const Nav = () => {
       <nav className={classes.nav}>
         <ul className={classes.list}>
           <li>
-            <Link to={ROUTE.home} className={classes.link(isHome)}>
+            <Link
+              to={ROUTE.home}
+              onClick={() => {
+                scrollToSection('hero')
+              }}
+              className={
+                location === 'hero' || location === ''
+                  ? classes.link(true)
+                  : classes.link(false)
+              }
+            >
               Inicio
             </Link>
           </li>
@@ -68,7 +83,9 @@ export const Nav = () => {
               onClick={() => {
                 scrollToSection('rules')
               }}
-              className={classes.link(false)}
+              className={
+                location === 'rules' ? classes.link(true) : classes.link(false)
+              }
             >
               Reglas
             </Link>
@@ -80,7 +97,11 @@ export const Nav = () => {
               onClick={() => {
                 scrollToSection('sponsors')
               }}
-              className={classes.link(false)}
+              className={
+                location === 'sponsors'
+                  ? classes.link(true)
+                  : classes.link(false)
+              }
             >
               Patrocinadores
             </Link>
@@ -92,7 +113,7 @@ export const Nav = () => {
               onClick={() => {
                 scrollToSection('awards')
               }}
-              className={classes.link(false)}
+              className={linkClass(false)}
             >
               Premios
             </Link>
@@ -104,16 +125,16 @@ export const Nav = () => {
               onClick={() => {
                 scrollToSection('faqs')
               }}
-              className={classes.link(false)}
+              className={
+                location === 'faqs' ? classes.link(true) : classes.link(false)
+              }
             >
               Preguntas
             </Link>
           </li>
 
           <li>
-            <Link to={ROUTE.register} className={classes.link(false)}>
-              Inscripción
-            </Link>
+            <Link to={ROUTE.register}>Inscripción</Link>
           </li>
         </ul>
       </nav>
