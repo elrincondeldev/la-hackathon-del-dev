@@ -13,8 +13,13 @@ export const Sponsors = () => {
           src="/images/sponsors/getmagical_green.svg"
           alt="getmagical logo"
         />
-        <img src="/images/sponsors/4geeks.svg" alt="4geeks logo" />
-        <img src="/images/sponsors/nuwe.svg" alt="4geeks logo" />
+        <a
+          href="https://4geeksacademy.com/es/inicio?utm_source=influencers&utm_medium=referral&utm_campaign=elrincondeldev&utm_location=madrid-spain&utm_content=landing"
+          target="_blank"
+        >
+          <img src="/images/sponsors/4geeks.svg" alt="4geeks logo" />
+        </a>
+        <img src="/images/sponsors/nuwe.svg" alt="nuwe logo" />
       </section>
     </article>
   )

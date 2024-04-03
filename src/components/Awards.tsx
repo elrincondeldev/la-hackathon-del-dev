@@ -78,14 +78,14 @@ export const Awards = () => {
           alt="Bootcamp full-stack developer"
           title="Full-Stack Developer"
           description="Conviértete en un programador que utiliza las tecnologias más búscadas, mentoria personalizada y un plan de estudios y career support para conseguir tu primer trabajo."
-          link="https://4geeksacademy.com/es/coding-bootcamps/desarrollador-full-stack"
+          link=" https://4geeksacademy.com/es/inicio?utm_source=influencers&utm_medium=referral&utm_campaign=elrincondeldev&utm_location=madrid-spain&utm_content=landingfs"
         />
         <Bootcamp
           img="bootcamp_image.svg"
           alt="Bootcamp data science & machine learning"
           title="Data Science & Machine Learning"
           description="Conviértete en un científico de datos, desarrolla modelos de predicción y uneté a una de las profesiones mejores pagadas del mundo."
-          link="https://4geeksacademy.com/es/coding-bootcamps/curso-datascience-machine-learning"
+          link="https://4geeksacademy.com/es/inicio?utm_source=influencers&utm_medium=referral&utm_campaign=elrincondeldev&utm_location=madrid-spain&utm_content=landingds"
         />
       </article>
     </section>
