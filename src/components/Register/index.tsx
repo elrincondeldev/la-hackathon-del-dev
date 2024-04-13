@@ -7,7 +7,6 @@ import { Participants } from './components/Participants'
 import { TermsAndConditions } from './components/TermsAndConditions'
 import { ProjectForm } from './components/ProjectForm'
 import { Link } from 'react-router-dom'
-import { createClient } from '@supabase/supabase-js'
 
 const DEFAULT_REGISTER_FORM_VALUES: RegisterForm = {
   project_name: '',
@@ -24,20 +23,10 @@ const DEFAULT_REGISTER_FORM_VALUES: RegisterForm = {
 } as const
 
 export const Register = () => {
-  const supabaseUrl = process.env.VITE_SUPABASE_URL
-  const supabaseKey = process.env.VITE_SUPABASE_KEY
-
-  if (!supabaseUrl || !supabaseKey) {
-    throw new Error('Supabase URL or Supabase Key is not defined')
-  }
-
-  const supabase = createClient(supabaseUrl, supabaseKey)
-
   const {
     register,
     handleSubmit,
     formState: { errors },
-    reset,
     control,
     trigger
   } = useForm<RegisterForm>({
@@ -45,27 +34,9 @@ export const Register = () => {
     defaultValues: DEFAULT_REGISTER_FORM_VALUES
   })
 
-  const onSubmit = async (data: RegisterForm) => {
+  const onSubmit = async () => {
     try {
-      const participants = data.participants.map((participant) => ({
-        participant_name: participant.participant_name,
-        participant_country: participant.participant_country,
-        participant_email: participant.participant_email,
-        project_name: data.project_name,
-        project_description: data.project_description,
-        project_url: data.project_url
-      }))
-
-      const { error: participantsError } = await supabase
-        .from('Participants')
-        .insert(participants)
-
-      if (participantsError) {
-        throw participantsError
-      }
-
-      reset()
-      toast.success('¡Felicidades! Acabas de registrar tu aplicación')
+      toast.error('No se aceptan más aplicaciones en este momento :(')
     } catch (error) {
       toast.error('Hubo un error al registrar la aplicación :(')
     }
