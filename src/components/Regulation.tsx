@@ -127,7 +127,7 @@ export const Regulation = () => {
             <h4 className="font-bold text-white text-2xl">Premios:</h4>
             <p className="mt-2 text-lg text-[#BEBEBE]">
               a. Para los 3 primeros puestos se ortagará un premio económico, el
-              cual se entregará en tarjetas de amazon.
+              cual se entregará en tarjetas de amazon. *Se debe poder comprar tarjetas de amazon para el país del ganador.*
               <br />
               b. El sorteo del pack de Logitech se hará en un lapsus de 10 días
               después de la resolución de los ganadores.
